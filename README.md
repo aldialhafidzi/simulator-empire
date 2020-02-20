@@ -1,3 +1,11 @@
+# How To Use ?
+1. Run XAMPP/MAMP/LAMP and start Apache Server & MYSQL Server
+2. Create New Database and give a name "siem"
+3. Open terminal and move to project root folder
+    - php artisan migrate
+    - php artisan serve
+4. Open http://localhost:8000
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
