@@ -12,4 +12,6 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::post('/add', 'HomeController@add')->name('addRequest');
+Route::get('/regresi', 'HomeController@regresi');
+Route::post('/addRequest', 'HomeController@addRequest')->name('addRequest');
+Route::post('/addRegresi', 'HomeController@addRegresi')->name('addRegresi');

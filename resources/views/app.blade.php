@@ -28,7 +28,17 @@
 <body>
     <div class="container">
         <hr>
-        <h1 class="text-center">SIMULASI MONTE CARLO</h1>
+        <div class="row">
+            <div class="col-8">
+                <h1 class="text-left">SIMULASI MONTE CARLO APP</h1>
+            </div>
+            <div class="col-4 d-flex align-items-center justify-content-end">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a href="#" class="btn btn-primary">Monte Carlo</a>
+                    <a href="/regresi" class="btn btn-secondary">Regresi</a>
+                </div>
+            </div>
+        </div>
         <hr>
         <div class="row">
             <div class="col-3">
@@ -81,15 +91,16 @@
                         @if ($item === $request->url($request->currentPage()))
                         <li class="page-item active"><a class="page-link" href="#">{{$request->currentPage()}}</a></li>
                         @else
-                        @if ($loop->iteration <= 2)
-                        <li class="page-item"><a class="page-link" href="{{$item}}">{{$loop->iteration}}</a></li>
-                        @endif
-                        @if ($item === $request->url($request->lastPage()))
-                        <li class="page-item"><a class="page-link" href="{{$request->url($request->lastPage())}}">{{$request->lastPage()}}</a></li>
-                        @endif
-                        @endif
-                        @endforeach
-                        <li class="page-item"><a class="page-link" href="{{$request->nextPageUrl()}}">Next</a></li>
+                        @if ($loop->iteration <= 2) <li class="page-item"><a class="page-link"
+                                href="{{$item}}">{{$loop->iteration}}</a></li>
+                            @endif
+                            @if ($item === $request->url($request->lastPage()))
+                            <li class="page-item"><a class="page-link"
+                                    href="{{$request->url($request->lastPage())}}">{{$request->lastPage()}}</a></li>
+                            @endif
+                            @endif
+                            @endforeach
+                            <li class="page-item"><a class="page-link" href="{{$request->nextPageUrl()}}">Next</a></li>
                     </ul>
                 </nav>
             </div>
